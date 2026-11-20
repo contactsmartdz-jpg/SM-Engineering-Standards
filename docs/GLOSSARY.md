@@ -1,0 +1,21 @@
+# Glossary
+
+- **ADR:** Architecture Decision Record describing context, decision, alternatives, and consequences.
+- **Acceptance criteria:** Testable statements defining required behavior.
+- **Adopting project:** A separate software project that references this standard.
+- **Baseline:** Recorded current state before changing enforcement.
+- **CI/CD:** Continuous integration and delivery/deployment automation.
+- **Control:** A policy expectation, process, or technical safeguard.
+- **Definition of Done (DoD):** Evidence-based conditions for completion.
+- **Definition of Ready (DoR):** Conditions for a task to be actionable.
+- **Evidence:** Reproducible or traceable proof tied to a revision, environment, and action.
+- **Exception:** Authorized, bounded, time-limited deviation from an applicable rule.
+- **High-risk change:** Change affecting identity, privilege, sensitive data, critical infrastructure, destructive persistence, payment, or comparable material exposure.
+- **Independent review:** Review not solely approved by the change author and performed by an appropriately authorized reviewer.
+- **Least privilege:** Grant only the permissions needed for an approved purpose.
+- **Normative requirement:** A MUST, MUST NOT, SHOULD, SHOULD NOT, or MAY rule as defined in [Policy](../governance/POLICY.md).
+- **Policy profile:** Local document defining how an adopting project implements a pinned standard.
+- **Quality gate:** A required or advisory check that produces a recorded result.
+- **Regression:** Unintended loss of previously working behavior.
+- **Risk owner:** Accountable human or authorized body accepting residual risk.
+- **Threat model:** Structured analysis of adversaries, assets, trust boundaries, and attack paths.
