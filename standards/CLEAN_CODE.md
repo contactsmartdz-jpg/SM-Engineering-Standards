@@ -3,28 +3,23 @@
 **Status:** Draft 0.1 · **Scope:** All software projects · **ID prefix:** CC
 
 ## Purpose
-Write code that a competent maintainer can understand, change, test, and safely operate. Correct behavior is necessary but not sufficient. Prefer evidence of maintainability over arbitrary numeric style limits.
+Make code understandable, testable, and safe to change while prioritizing **working user outcomes**. Do not mistake broad refactoring or aesthetic perfection for feature delivery.
 
 ## Normative rules
-- **CC-01 (MUST):** Use names that express intent, domain meaning, and units where relevant. Avoid misleading abbreviations and ambiguous booleans.
-- **CC-02 (MUST):** Keep each unit of code focused on a coherent responsibility. Separate unrelated reasons to change.
-- **CC-03 (MUST):** Avoid duplicated *knowledge and business rules*. Do not create premature abstractions merely because two implementations look similar.
-- **CC-04 (MUST):** Validate assumptions at system boundaries. Explicitly represent invalid, missing, and exceptional states.
-- **CC-05 (MUST):** Handle expected failures deliberately. Never silently discard errors or expose sensitive diagnostics to end users.
-- **CC-06 (MUST):** Changes must follow the repository's formatter, naming conventions, and supported language version.
-- **CC-07 (SHOULD):** Prefer simple control flow, limited mutable state, small coherent interfaces, and self-explanatory code.
-- **CC-08 (SHOULD):** Keep comments focused on *why*, contracts, risks, and non-obvious constraints. Remove misleading or obsolete comments.
-- **CC-09 (SHOULD):** Avoid speculative features and unnecessary configuration. Refactor when a real requirement justifies it.
-- **CC-10 (MUST):** Avoid unrelated reformatting, renaming, or refactoring in feature and bug-fix changes unless explicitly approved.
+- **CC-01 (MUST):** Use names expressing intent and domain meaning; avoid misleading ambiguities.
+- **CC-02 (MUST):** Keep code units focused on coherent responsibilities; do not combine unrelated business rules and privileged operations.
+- **CC-03 (MUST):** Avoid duplicated business knowledge while resisting premature general-purpose abstractions.
+- **CC-04 (MUST):** Validate assumptions at boundaries and represent relevant missing, invalid, or exceptional states.
+- **CC-05 (MUST):** Handle expected failure deliberately; never swallow errors or leak sensitive diagnostics.
+- **CC-06 (MUST):** Follow the configured formatter, compatible language version, and repository conventions.
+- **CC-07 (SHOULD):** Prefer simple control flow, limited mutable state, and small coherent interfaces.
+- **CC-08 (SHOULD):** Comment on non-obvious intent, contracts, and risks; remove misleading comments.
+- **CC-09 (SHOULD):** Avoid speculative features, configuration, and future-proofing.
+- **CC-10 (MUST):** Avoid unrelated reformatting, renaming, or refactoring in a feature/bug fix unless authorized.
+- **CC-11 (SHOULD):** Defer non-blocking cleanup until functional acceptance or an identified release need. Track genuine debt with impact and owner, rather than refactoring for its own sake.
+- **CC-12 (MUST):** Do not defer material correctness, security, permission, data-integrity, or irreversible-action defects under the label "refactor later."
 
-## Review evidence
-Reviewers check naming, complexity, responsibility boundaries, duplication of rules, failure handling, testability, and the size of unrelated changes. A style checker is not a substitute for this review.
+## Review
+Focus on real behavior, boundaries, maintainability hazards, and testability. Do not impose arbitrary universal file size, method length, abstraction count, or cleanup percentage. Use automated formatting rather than repeated manual style review.
 
-## Examples of unacceptable outcomes
-- An unexplained magic value that controls business behavior.
-- Catching every exception and reporting success.
-- A single routine that performs authorization, storage, business rules, and presentation.
-- A new abstraction with no current caller or documented purpose.
-
-## Exceptions
-A justified exception must be recorded under [Policy](../governance/POLICY.md) and must not waive security or correctness requirements without an approved risk assessment.
+See [Development Policy](../governance/DEVELOPMENT_POLICY.md), [Production Readiness](../governance/PRODUCTION_READINESS_POLICY.md), and [Code Review](CODE_REVIEW.md).

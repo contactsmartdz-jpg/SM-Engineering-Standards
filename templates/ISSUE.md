@@ -1,31 +1,16 @@
-# Engineering Work Item — Template
+# Engineering Work Item — Short Template
 
-## Problem / outcome
-What is wrong or missing, who is affected, and what observable result is expected?
+> Use the existing issue/task. Do not create extra design documents by default.
 
-## Scope
-- In scope:
-- Out of scope:
-- Dependencies and constraints:
-- Reference documents or designs:
+- **User outcome / smallest useful feature:**
+- **Acceptance (1–3 observable checks):**
+- **Risk track:** Fast / Standard / Critical — why?
+- **Demo/test environment and verification:**
+- **Critical safety or permission dependency (if any):**
 
-## Acceptance criteria
-- [ ] [Observable criterion, not a vague quality adjective]
-- [ ] [Failure / boundary behavior]
-- [ ] [Relevant permission, privacy, or reliability condition]
+## After demonstration
+- **Result:** Accepted / Changes requested / Rejected
+- **Revision and evidence:**
+- **Remaining release blockers or owned non-blocking debt:**
 
-## Risk assessment
-- Risk level: [low / moderate / high]
-- Sensitive or irreversible action? [yes/no; authorization reference]
-- Data migration or compatibility impact:
-- Rollback / recovery needs:
-
-## Verification plan
-- Unit / integration / end-to-end / non-functional tests:
-- Security checks:
-- Evidence owner and expected location:
-
-## Readiness
-- Missing decisions or blockers:
-- Accountable approver:
-- Ready for implementation: [yes/no]
+For **Critical** changes only, include affected resources, trust boundaries, approval owner, required isolation, recovery, and relevant contract/migration evidence before executing risky actions.

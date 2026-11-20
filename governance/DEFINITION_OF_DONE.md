@@ -2,18 +2,20 @@
 
 **Status:** Draft 0.1
 
-A change is done only when all **applicable** requirements below are satisfied with evidence:
+There are **two completion states**. Never describe the first as permission to release to production.
 
-- [ ] Acceptance criteria are demonstrated and linked to the change.
-- [ ] Code follows the chosen [Clean Code](../standards/CLEAN_CODE.md) and [Architecture](../standards/ARCHITECTURE.md) rules.
-- [ ] Tests are implemented and executed at the final relevant revision; failures and skips are accurately reported.
-- [ ] Mandatory [Quality Gates](../quality-gates/QUALITY_GATES.md) pass, or an authorized bounded exception exists where policy permits.
-- [ ] Security, privacy, dependency, and data-integrity risks are assessed and addressed.
-- [ ] Independent review is complete where risk requires it; blocking findings are resolved.
-- [ ] Documentation, changelog, and ADRs are updated when applicable.
-- [ ] Migration and recovery evidence is available for risky persistent-data or production changes.
-- [ ] Delivery, release, and handoff records contain links to evidence, open limitations, and operational ownership.
+## A. Functionally validated (Build → Validate)
+- [ ] The smallest usable feature meets the recorded observable acceptance criteria in a suitable environment.
+- [ ] Relevant behavior checks and **all safety checks required for the affected action/environment** have been executed; failures and unrun checks are explicit.
+- [ ] User/product validation outcome (accepted / changes requested / rejected), revision, limitations, and owner are recorded in the existing issue/PR.
+- [ ] Any unconnected or simulated capability is clearly marked as such.
 
-**Not done:** a passing build without appropriate tests; an agent's unsupported success claim; a missing mandatory review; or a blocked security control disguised as a pass.
+At this stage, unrelated refactoring, speculative scalability, presentation polish, exhaustive documentation, and non-blocking technical debt are **not required**. This state does not override merge protections or mandatory controls.
 
-Completion and production deployment are distinct decisions. The project release owner determines when an accepted change can safely ship.
+## B. Production ready (Harden → Release)
+- [ ] All **applicable** locally configured [Quality Gates](../quality-gates/QUALITY_GATES.md) pass, or a permitted authorized exception is recorded without falsifying results.
+- [ ] No unresolved security, privacy, authorization, data-integrity, or release-safety blocker remains.
+- [ ] Required review/authorization, compatibility and migration evidence, recovery, and essential documentation are complete **where relevant**.
+- [ ] Release owner accepts residual risk for the exact revision and environment; non-blocking debt is tracked with owner and priority.
+
+A passing build is not proof of completion. A user's functional approval is not production approval. See [Development Policy](DEVELOPMENT_POLICY.md) and [Production Readiness](PRODUCTION_READINESS_POLICY.md).

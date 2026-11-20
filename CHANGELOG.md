@@ -1,11 +1,14 @@
 # Changelog
 
-All notable changes to this standard will be documented here. This project intends to follow Semantic Versioning after its first stable release.
+Notable changes are recorded here. Stable releases will use Semantic Versioning.
 
 ## [Unreleased]
-- Draft 0.1 framework for policy, clean code, architecture, security, tests, reliability, documentation, dependencies, code review, and AI agent behavior.
-- Risk-aware quality gates and evidence-based readiness/completion requirements.
-- Generic adoption, exception, issue, review, and decision templates.
-- Documentation validation for internal references.
+- Revised draft 0.1 around **Feature First, Production Quality Before Release**: Build → Validate → Harden.
+- Separated [Development Policy](governance/DEVELOPMENT_POLICY.md) from [Production Readiness](governance/PRODUCTION_READINESS_POLICY.md).
+- Introduced change-level Fast / Standard / Critical tracks and removed default sequential review/approval chains for lower-risk work.
+- Distinguished **functionally validated** from **production ready** in the Definition of Done and quality gates.
+- Simplified issue, PR, and adoption templates and directed agents to use existing work items instead of unnecessary documents.
+- Preserved mandatory security, authorization, data integrity, evidence honesty, and independent high-risk review.
+- Initial draft of core engineering standards, AI-agent rules, and documentation checks.
 
-**Release status:** This is an initial proposal, not a tagged 1.0 standard. It is subject to review and revision.
+**Release status:** Draft 0.1; no stable tag and no automatic adoption by projects.

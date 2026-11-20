@@ -1,42 +1,27 @@
-# Standards Adoption Profile — Template
+# Standards Adoption Profile — Minimal Template
 
-> Copy this template into the **adopting project**. Do not submit project-specific profiles to the central standards repository.
+> Copy into the adopting project's own repository, not the public central standard.
 
-## Project metadata
-- Project/repository: [name]
-- Accountable owner: [role or team]
-- Effective date: [YYYY-MM-DD]
-- Standard version: [immutable release tag and/or commit SHA]
-- Profile version: [version]
-- Risk classification: [low / moderate / high; explain]
+- **Project / accountable owner:**
+- **Pinned standard tag or commit:**
+- **Effective date and affected components:**
+- **Environment boundaries (dev / validation / production):**
+- **Risk classification owner and escalation rule:**
+- **Functional acceptance owner:**
+- **Production release authority:**
 
-## Scope
-- Included components: [areas]
-- Excluded components: [areas and rationale]
-- Applicable obligations: [legal / contractual / regulatory requirements if relevant]
+## Tracks and applicable controls
+| Track | Scope examples | Required validation checks | Required production checks | Reviewer/approver | Evidence location |
+| --- | --- | --- | --- | --- | --- |
+| Fast | [non-sensitive UI/content] | [quick relevant behavior/build] | [applicable safety and release checks] | [if any] | [existing issue/PR] |
+| Standard | [ordinary feature] | [targeted tests] | [applicable controls] | [single review if required] | [existing issue/PR] |
+| Critical | [sensitive/irreversible] | [isolation/security/permissions] | [independent review, release safety] | [named owner] | [existing issue/PR] |
 
-## Local implementation
-| Standard area | Tool or control | Evidence location | Required? | Owner |
-| --- | --- | --- | --- | --- |
-| Clean code | [formatter/linter/review] | [CI or report] | [yes/no + why] | [role] |
-| Architecture | [ADR and review] | [path] | [yes/no + why] | [role] |
-| Security | [scans and access tests] | [path] | [yes/no + why] | [role] |
-| Testing | [test suites] | [path] | [yes/no + why] | [role] |
-| Dependencies | [audit and license check] | [path] | [yes/no + why] | [role] |
-| Release safety | [deploy/recovery gates] | [path] | [yes/no + why] | [role] |
+- **Tools and alternate evidence if hosted CI is unavailable:**
+- **Protected branch / merge requirements (actually configured):**
+- **Exception registry and expiry owner:**
+- **Recovery and data handling where relevant:**
+- **Known gaps (documented / configured / verified):**
+- **Next assessment date:**
 
-## Change controls
-- Mainline protection or equivalent: [configuration and evidence]
-- Independent reviewer requirements: [review model]
-- High-risk approval authority: [role]
-- Exception registry: [link]
-- Data classification and handling: [link]
-
-## Verification
-- Baseline assessment date and findings: [date/link]
-- Required quality-gate identifiers: [QG-...]
-- Last verified revision: [commit]
-- Unverified or planned controls: [list]
-- Next reassessment: [date]
-
-Approval: [accountable owner / date]
+**Adoption approval:** [accountable owner, date]. Optional cleanup is not automatically a production blocker. This profile may increase controls, but cannot waive mandatory safety controls silently.

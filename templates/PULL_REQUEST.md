@@ -1,34 +1,12 @@
-# Pull Request — Template
+# Pull Request — Lean Template
 
-## Purpose
-- Linked task / requirement:
-- Change summary:
-- Out of scope:
+- **Outcome / linked task:**
+- **Risk track:** Fast / Standard / Critical
+- **Behavior delivered and scope:**
+- **Acceptance/demo result and revision:**
+- **Checks actually run:** command/link, result, relevant environment (PASS / FAIL / NOT RUN)
+- **Relevant security/data/compatibility risk:** none identified / details
+- **Open blockers / non-blocking follow-up with owner:**
+- **State:** Functionally validated / Production ready (only after release checks)
 
-## Risk and compatibility
-- Risk level: [low / moderate / high]
-- Security/privacy/data impact:
-- Interface or backward compatibility:
-- Dependency / license impact:
-- Migration, deployment, rollback or recovery needs:
-
-## Evidence at this revision
-| Gate | Result (PASS / FAIL / NOT RUN / N/A) | Evidence link or reason |
-| --- | --- | --- |
-| QG-01 Traceability | | |
-| QG-02 Static quality | | |
-| QG-03 Build/type validation | | |
-| QG-04 Tests | | |
-| QG-05 Dependency/secrets | | |
-| QG-06 Security | | |
-| QG-07 Independent review | | |
-| QG-08 Documentation | | |
-| QG-09 Release/data safety | | |
-
-## Reviewer notes
-- Open questions:
-- Known limitations:
-- Required approvals / exception IDs:
-- Verified commit / revision:
-
-> Do not mark not-run checks as passed. Ensure results correspond to the final reviewed revision.
+> The [Quality Gates](../quality-gates/QUALITY_GATES.md) catalog is **not** a request to paste nine rows into every PR. Record only applicable controls, evidence, and genuine blockers. Critical changes additionally need independent review, accountable approval, and relevant recovery evidence. Never call NOT RUN a PASS.

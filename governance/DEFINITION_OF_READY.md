@@ -2,17 +2,19 @@
 
 **Status:** Draft 0.1
 
-A task is ready for implementation when the following applicable conditions are documented:
+**Ready means actionable, not fully documented.** A work item can begin with its existing issue or task; an additional specification document is not required by default.
 
-- [ ] Desired outcome and intended users or consumers are clear.
-- [ ] Scope, exclusions, dependencies, and assumptions are stated.
-- [ ] Acceptance criteria are observable and testable.
-- [ ] Relevant privacy, security, accessibility, performance, and reliability risks are considered.
-- [ ] Required decisions, approvals, and interface contracts are available.
-- [ ] The verification approach and evidence owner are identified.
-- [ ] High-risk changes include a rollback or recovery approach before execution.
-- [ ] Missing essential information is recorded as a blocker rather than guessed.
+## Fast / Standard
+- [ ] User outcome and smallest usable feature are clear.
+- [ ] One to three observable acceptance criteria are recorded (including relevant failure behavior).
+- [ ] Change-level risk track and basic verification plan are identified.
+- [ ] Any essential missing input or permission that would prevent safe implementation is identified.
 
-For an urgent incident, a minimal scope and authorization may be recorded first, with the remaining details documented promptly afterward. This does not bypass security or production change approvals.
+## Critical — additional prerequisites before risky action
+- [ ] Trust boundaries, sensitive-data/authorization impacts, owner, and environmental scope are explicit.
+- [ ] Required approval is obtained before executing a sensitive or irreversible operation.
+- [ ] Applicable recovery, compatibility, isolation, and safety verification approach exists.
 
-The readiness checklist is a shared baseline; adopting projects may add checks but should not use bureaucratic completion as a substitute for an actionable task.
+Open non-critical design or usability questions are **feedback items**, not automatic blockers to starting a safe vertical slice. Do not repeatedly request decisions already captured in the work item.
+
+See [Development Policy](DEVELOPMENT_POLICY.md) and [Production Readiness](PRODUCTION_READINESS_POLICY.md).
